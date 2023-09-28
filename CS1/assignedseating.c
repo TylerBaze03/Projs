@@ -1,4 +1,4 @@
-
+// THIS PROGRAM DOES NOT WORK I GOT A 50 ON IT FOR SEGFAULTING SOMEWHERE IDK
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
