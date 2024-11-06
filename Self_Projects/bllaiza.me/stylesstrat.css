@@ -1,0 +1,142 @@
+ /* Header whcih includes links to all pages */
+.header{
+    display:flex;
+    justify-content: space-between;
+    background-color:white;
+    text-align:left;
+    padding:32px; 
+    font-family: verdana;
+    font-size:14px;
+    margin:auto;
+    padding-left:2.3in;
+}
+ /* basic body style */
+body {
+    background-color:#d8d4d4a8;
+    font-family: verdana;
+    font-size:14px;
+    text-align:center;
+    margin:auto;
+    line-height: 1.5
+}
+ /* only used for giving margins to the text */
+.bod{
+    padding-top: 1.3in;
+    padding-bottom:2.3in;
+}
+ /* margins so the text dosent go all the way to the side of the screen */
+.paragraph{
+    text-align: left;
+    margin-left: 2.3in;
+    margin-right:2.3in;
+    white-space: pre-line;
+    line-break: auto;
+    line-height:1.2;
+}
+ /* header inside a body  */
+.h1{
+    font-family: Verdana;
+    font-size:30px;
+    text-align: left;
+    padding-left:2.3in;
+}
+ /* nav for the header */
+.nav{
+    padding-right:2.3in;
+    padding-left:2.3in;
+}
+ /* keeping header in line */
+.nav li{
+    display:inline-block;
+}
+ /* used for footer */
+.a{
+    text-align: right;
+    margin-right:2.3in;
+}
+a:link { 
+    text-decoration: none; 
+} 
+a:visited { 
+    text-decoration: none; 
+} 
+a:hover { 
+    text-decoration: none; 
+} 
+a:active { 
+    text-decoration: none; 
+}
+ /* footer for copyright and disticnmtion from body  */
+.footer{
+    background-color:#5c5b5ba8;
+    text-align:right;
+    padding:32px; 
+    font-family: verdana;
+    font-size:14px;
+    color:rgb(56, 55, 55);
+    
+}
+ /* easier to make id for it since it should only be used by copyright */
+#copyright{
+    margin-right:2.3in;
+}
+ /* mini header b4 i go into content in different pages */
+.miniheader{
+    text-align: left;
+    margin-left: 2.3in;
+    margin-right:2.3in;
+    white-space: pre-line;
+    line-break: auto;
+    line-height:1.2;
+    font-size: 15px;
+}
+ /* for an a that is not in the footer or for an A than needs to be alliged left */
+.anon{
+    margin-left:2.3in;
+    text-align: left;
+    line-height:1.5;
+}
+ /* Dropdown Button */
+.dropbtn {
+    background-color: #e4e0e0a8;
+    font-family: verdana;
+    color: blueviolet;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+  /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 

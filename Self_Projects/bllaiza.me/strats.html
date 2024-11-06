@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang ="en"> 
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blaiza.me</title>
+    <link rel="stylesheet" href="stylesstrat.css">
+</head>
+<header class="header">
+    <link><a href="bllaizame.html">bllaiza.me</a>
+    <nav class="nav">
+        
+        <li><a class = "right" href="contact.html">Contact</a> |</li>
+        <li><a class = "right"href="strats.html">Previous years</a></li>
+    </nav>
+</header>
+
+<body> 
+    <div class="bod">
+        <h1>Mit Log</h1>
+        <p class = "miniheader">This was initially going to be FFXIV mit sheet log buuuuttttt I just do it in google now via folders, so got the idea of keeping the main page reserved for the current years journal posts and this being the log for basically an snap shot of the main page at the end of the year so its only one year at a time on the main page. <br>So sad because I made these cool buttons  	(｡╯︵╰｡)</p>
+        <div class = "anon">
+            <button class="dropbtn" onclick = "window.location.href = 'teamit.html'">2024</button><br>
+            <button class="dropbtn" onclick = "window.location.href = 'dsrmit.html'">2025</button><br>
+            <!--
+            <button class="dropbtn" onclick = "window.location.href = 'uwumit.html'">UwU Mit</button><br>
+            !-->
+        </div>
+            
+    </div>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script> 
+
+</body> 
+
+<footer class = "footer">
+    <body>
+        <link>Heavily inspired by <a class = "a" href="http://clees.me">clees.me</a>
+
+    </body>
+    <div>
+        <!--&copy;
+        -->
+        <span id="copyright">
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+            bllaiza.me
+        </span>
+    </div>
+    
+</footer>
+</html> 
