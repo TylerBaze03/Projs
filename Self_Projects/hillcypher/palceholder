@@ -1,0 +1,84 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.lang.Math;
+
+class Solution {
+    private static final Map<Integer, String> numWords;
+        // 1-10
+        String[] upToTweanty = {
+            "",
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+            "Ten",
+            "Eleven",
+            "Twelve",
+            "Thirteen",
+            "Fourteen",
+            "Fifteen",
+            "Sixteen",
+            "Seventeen",
+            "Eighteen",
+            "Nineteen"
+        };
+        //10-90
+        String[] ten = {
+            "",
+            "Ten",
+            "Twenty",
+            "Thirty",
+            "Forty",
+            "Fifty",
+            "Sixty",
+            "Seventy",
+            "Eighty",
+            "Ninety"
+        };
+        //hundreads to billion
+        String[] thousand = {
+            "",
+            "Thousand", 
+            "Million", 
+            "Billion"
+        };
+    static{
+        numWords =  new HashMap<>();
+        
+    }
+    private String builder(int n){
+        if (n == 0)
+            return "";
+        if(n < 20)
+            return upToTweanty[n] + " ";
+        if(n < 100)
+            return ten[n/ 10] + " " + builder(n % 10);
+        else
+            return upToTweanty[n/100] + " Hundred " + builder(n % 100);
+
+    }
+    public String numberToWords(int num) {
+        if (num == 0){
+            return "Zero";
+        }
+        int i = 0;
+        String res = "";
+        while(num > 0){
+            if(num % 1000 !=0){
+                res = builder(num % 1000) + thousand[i] + " " + res;
+            }
+            num = num / 1000;
+            i++;
+        }
+
+
+
+        
+        return res.trim();
+    }
+}

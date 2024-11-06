@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 course_dict = {
 				"school" : "University of Central Florida",
@@ -90,3 +91,97 @@ print(course_dict)
 
 course_dict.clear()
 
+=======
+
+course_dict = {
+				"school" : "University of Central Florida",
+				"semester" : "Fall",
+				"year" : 2022,
+				"class": "COP2500"
+#					,"class": "COP2501"
+			}
+print(course_dict)
+
+example_dict = {
+				'A' :123,
+				'B' : True,
+				26 : 'Z',
+				"mylist": ["alpha", "beta", "gamma", "delata"]
+				}
+print(example_dict)
+
+my_semester = course_dict{"semester"] + " " +str(course_dict("year"])
+
+print(my_semester)
+
+print(course_dict["semester"])
+print(course_dict.get("semester")
+
+my_semester = course_dict["semester"] + " " + str(course_dict["year"])
+
+print(my_semester)
+
+print(exmaple_dict["mylist"][2])
+
+print(len(course_dict))
+
+course_dict["semester"] = "Spring"
+course_dict.update(["year": 2023})
+course["instructor"] = "Kyle Dencker"
+
+print(len(course_dict))
+
+print(course_dict)
+
+print(course_dict.keys())
+print(list(course_dict))
+
+print(course_dict.values())
+print(list(course_dict.values))
+
+print(course_dict[0])
+
+print(list(course_dict)[3])
+print(course_dict[list(course_dict)[3]])
+
+print(course.items())
+
+if "course" in course_dict: 
+	print("yes")
+else:
+	print("no")
+	
+#loop through dictionary
+
+for i in course_dict:
+	print(i)
+	
+for i in course_dict.keys():
+	print(i)
+	
+for i in course_dict.values():
+	print(i)
+	
+for i in course_dict.keys():
+	print(i)
+	
+for i, j in course_dict.items():
+	print("key:",i,"Value": j)
+	
+for i, j in course_dict.keys():
+	print("key", i, "value:", course_dict[i])
+
+
+
+#removing values
+print(course_dict)
+
+course_dict.pop("school")
+
+course_dict.popitem()
+
+print(course_dict)
+
+course_dict.clear()
+
+>>>>>>> b756d6d (Updating repositroy using git)
