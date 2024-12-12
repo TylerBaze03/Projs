@@ -27,7 +27,7 @@ import time
 #3 ['#', '!', '!', 'X', 'X', '#']
 #4 ['#', '@', 'X', 'X', 'X', '#']
 #5 ['X', 'X', 'X', '@', 'X', 'X']
-# wtf???????????????? out of bounds error somehwere here, maybe try throwing and trying to cathc out of bounds stuff?????
+# wtf???????????????? out of bounds error somehwere here, maybe try throwing and trying to cathc out of bounds stuff???
 
 
 board1 = [['X','X','X','X','X','X'],['X','X','@','X','X','X'],['X','X','X','X','@','X'],['X','X','X','X','X','@'],['X','@','X','X','X','X'],['X','X','X','@','X','X']]
