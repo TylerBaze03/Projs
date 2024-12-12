@@ -11,8 +11,8 @@ import (
     "encoding/csv"
 )
 
-//todo: finish importing a csv to a map and map to a csv in order to maintain the bot even when not active
-// this may have to utilize the warn and punishment system but would rather use punishment for when the number is above 3 
+//todo: start testing to see if you can even read m,essage and if these modules(csv stuffs) implemeted correctly 
+//utilize the warn and punishment system but would rather use punishment for when the number is above 3 
 // than check status in order to exhert warnings
 
 
@@ -20,6 +20,7 @@ import (
 var botToken string
 var users = make(map[string]int)
 var bannedWords = []string{"honkai", "hsr", "honkai starrail"}
+const constFile string = "C:\\Users\\Horizon\\Documents\\Github\\Projs\\Self_Projects\\discBots\\users.csv"
 
 
 //checks if there is something wrong with loading bot
@@ -29,29 +30,59 @@ func checkNilErr(e error) {
     }
 }
 
-// reading in a csv of all the users and their history
-func readCsvFile(filePath string) [][]string {
-    f, err := os.Open(filePath)
-    if err != nil {
-        log.Fatal("Unable to read input file " + filePath, err)
-    }
-    defer f.Close()
 
-    csvReader := csv.NewReader(f)
-    records, err := csvReader.ReadAll()
-    if err != nil {
-        log.Fatal("Unable to parse file as CSV for " + filePath, err)
-    }
 
-    return records
+func readCsvFile(filePath string) (users map[string]int, err error) {
+	f, err := os.Open(filePath)
+	if err != nil {
+		log.Fatal("Unable to read input file "+filePath, err)
+	}
+	defer f.Close()
+
+	csvReader := csv.NewReader(f)
+	lines, err := csvReader.ReadAll()
+	if err != nil {
+		log.Fatal("Unable to parse file as CSV for "+filePath, err)
+	}
+
+	users = make(map[string]int, len(lines))
+
+	for i := range lines {
+		users[lines[i][0]], err = strconv.Atoi(lines[i][1])
+	}
+	return users, nil
 }
 
-func csvToMap(returnMap []map[string]int){
+func mapToCsv(returnMap map[string]int) {
+	f, err := os.OpenFile(constFile, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	if err != nil {
+		log.Fatal("Unable to read input file "+constFile, err)
+	}
+	defer f.Close()
+	// delete the contents since we should have all the contects loaded in the program
+	if err := os.Truncate(constFile, 0); err != nil {
+		log.Printf("Failed to truncate: %v", err)
+	}
 
+	// load the contents into the files
+	csvWriter := csv.NewWriter(f)
+	if err != nil {
+		log.Fatal("Unable to parse file as CSV for "+constFile, err)
+	}
 
-}
-func mapToCsv(returnMap []map[string]int){
-
+	for key, value := range returnMap {
+		println(key, value)
+		//s := make([]string, 0, len(key)+value)
+		var s []string
+		s = append(s, key)
+		s = append(s, strconv.Itoa(value))
+		fmt.Println(s)
+		err := csvWriter.Write(s)
+		if err != nil {
+			log.Fatal("Unable to write to csv", err)
+		}
+	}
+	csvWriter.Flush()
 
 }
 
