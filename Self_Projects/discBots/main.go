@@ -1,10 +1,10 @@
 package main
 
-import bot "nobot/Bot"
+import bot "noBot/bot"
 
 func main() {
 
-	bot.BotToken = "DISCORD TOKEN ID"
+	bot.BotToken = "MTMxNjUzOTY2NzkxODYyMjc5Mg.GMt93J.o_JzuM1PceilKtQk1ALpvM44ShfZy5qvOEV0LE"
 	bot.Run() // call the run function of bot/bot.go
 
 }
