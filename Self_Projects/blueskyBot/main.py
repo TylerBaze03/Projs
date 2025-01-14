@@ -4,7 +4,7 @@ def main():
 
 
     client = Client()
-    profile = client.login('wasdwaasdw.bsky.social', 'Xrarzfile914@')
+    profile = client.login('wasdwaasdw.bsky.social', 'xxxx')
     print('Welcome, ', profile.display_name)
 
 
