@@ -1,4 +1,0 @@
-MTMxNjUzOTY2NzkxODYyMjc5Mg.GMt93J.o_JzuM1PceilKtQk1ALpvM44ShfZy5qvOEV0LE
-
-gen url 
-https://discord.com/oauth2/authorize?client_id=1316539667918622792&permissions=8&integration_type=0&scope=bot
